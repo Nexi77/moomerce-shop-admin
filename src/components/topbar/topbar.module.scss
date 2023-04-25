@@ -1,0 +1,52 @@
+.topbar {
+    background-color: var(--header-bg);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topbarWrapper {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 90px;
+}
+
+.topbarIcons {
+    display: flex;
+    gap: 10px;
+
+    svg {
+        fill: var(--primary-color);
+    }
+}
+
+.desktopMenu {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+   }
+}
+
+.menuEntry {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.menuToggle {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    @media screen and (min-width: 768px) {
+            display: none;
+    }
+}

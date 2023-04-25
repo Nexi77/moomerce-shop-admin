@@ -47,6 +47,9 @@ h4 {
 
 #root, .App {
   min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-white);
+  color: var(--primary-text-color);
 }
 
 /* A elements that don't have a class get default styles */
@@ -83,4 +86,42 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+button {
+  cursor: pointer;
+}
+
+button.clean {
+  background-color: transparent;
+  border: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.MuiPopover-paper {
+  background-color: var(--bg-white) !important;
+  color: var(--primary-text-color) !important;
+}
+
+.MuiDivider-root {
+  border-color: var(--primary-text-color) !important;
+}
+
+.popover-button {
+  background-color: transparent;
+  color: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding: 10px;
+  width: 100%;
+}
+
+.popover-button:hover, .popover-button:focus-visible {
+  background-color: var(--button-hover-color);
 }

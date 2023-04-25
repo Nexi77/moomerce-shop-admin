@@ -1,0 +1,17 @@
+.theme-light {
+    --bg-white: #ffffff;
+    --header-bg: #fff;
+    --primary-color: #673ab7;
+    --primary-text-color: #222;
+    --ui-element-bg: #fff;
+    --button-hover-color: rgba(0,0,0,0.1)
+}
+
+.theme-dark {
+    --bg-white: #474545;
+    --header-bg: #333;
+    --primary-text-color: #fff;
+    --primary-color: #c0a7ec;
+    --ui-element-bg: #333;
+    --button-hover-color: rgba(0, 0, 0, 0.2);
+}
