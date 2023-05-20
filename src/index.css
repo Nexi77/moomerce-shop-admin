@@ -48,6 +48,8 @@ h4 {
 #root, .App {
   min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-white);
   color: var(--primary-text-color);
 }
@@ -124,4 +126,13 @@ button.clean {
 
 .popover-button:hover, .popover-button:focus-visible {
   background-color: var(--button-hover-color);
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.container main {
+  width: 100%;
 }

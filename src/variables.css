@@ -4,7 +4,12 @@
     --primary-color: #673ab7;
     --primary-text-color: #222;
     --ui-element-bg: #fff;
-    --button-hover-color: rgba(0,0,0,0.1)
+    --sidebar-bg: rgb(251,251,255);
+    --sidebar-color: #555;
+    --sidebar-link-focused: rgb(235, 235, 240);
+    --sidebar-scroll-color-moz: rgb(25, 25, 30) rgb(251, 251, 255);
+    --sidebar-scroll-color: rgb(251, 251, 255);
+    --sidebar-scroll-color-thumb: rgb(25, 25, 30);
 }
 
 .theme-dark {
@@ -14,4 +19,10 @@
     --primary-color: #c0a7ec;
     --ui-element-bg: #333;
     --button-hover-color: rgba(0, 0, 0, 0.2);
+    --sidebar-bg: rgb(25,25,30);
+    --sidebar-color: #eee;
+    --sidebar-link-focused: rgba(40, 40, 47, 0.8);
+    --sidebar-scroll-color-moz: rgb(25, 25, 30) rgb(251, 251, 255);
+    --sidebar-scroll-color: rgb(25, 25, 30);
+    --sidebar-scroll-color-thumb: rgb(251, 251, 255);
 }
