@@ -1,3 +1,7 @@
+:root {
+    --primary-button: #673ab7;
+}
+
 .theme-light {
     --bg-white: #ffffff;
     --header-bg: #fff;
@@ -10,6 +14,8 @@
     --sidebar-scroll-color-moz: rgb(25, 25, 30) rgb(251, 251, 255);
     --sidebar-scroll-color: rgb(251, 251, 255);
     --sidebar-scroll-color-thumb: rgb(25, 25, 30);
+    --widget-bg: rgb(255,255,255);
+    --input-color: #222;
 }
 
 .theme-dark {
@@ -25,4 +31,6 @@
     --sidebar-scroll-color-moz: rgb(25, 25, 30) rgb(251, 251, 255);
     --sidebar-scroll-color: rgb(25, 25, 30);
     --sidebar-scroll-color-thumb: rgb(251, 251, 255);
+    --widget-bg: rgb(46, 45, 45);
+    --input-color: #fff;
 }

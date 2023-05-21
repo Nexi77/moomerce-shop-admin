@@ -1,0 +1,16 @@
+.chart {
+    margin: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    scrollbar-color: var(--sidebar-scroll-color-moz);
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background-color: var(--sidebar-scroll-color);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--sidebar-scroll-color-thumb);
+        -webkit-border-radius: 5px;
+    }
+}

@@ -4,8 +4,11 @@ import { Person, Settings, Logout, LightMode, DarkMode } from '@mui/icons-materi
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '@/contexts/ThemeContext';
-import avatarStyleModule from './avatar.module.scss';
+import useSwr from 'swr';
+import fetcher from '@/utils/fetcher';
+import { UserModel } from '@/types/app';
 import topbarStyleModule from '../topbar/topbar.module.scss';
+import avatarStyleModule from './avatar.module.scss';
 
 const Avatar = () => {
     const { theme, setTheme } = useContext(ThemeContext)
@@ -14,6 +17,7 @@ const Avatar = () => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
     const open = Boolean(anchorEl);
     const id = open ? 'account-popover' : undefined;
+    const { data } = useSwr<UserModel | null>('users/current', fetcher)
     return (
         <>
             <button 
@@ -47,7 +51,7 @@ const Avatar = () => {
                     </div>
                     <div className={avatarStyleModule.popoverEntry}>
                         <span className={avatarStyleModule.labelSpan}>Username:</span>
-                        <span>User</span>
+                        <span>{ data?.name }</span>
                     </div>
                     <Divider />
                     <div className={avatarStyleModule.buttonsList}>

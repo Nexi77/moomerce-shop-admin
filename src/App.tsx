@@ -1,9 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from '@/contexts/ThemeContext';
-import Topbar from "./components/topbar/Topbar"
-import Sidebar from './components/sidebar/Sidebar';
-import MenuContextProvider from './contexts/MenuContext';
+
 
 const App = () => {
   const { theme } = useContext(ThemeContext)
@@ -23,15 +21,7 @@ const App = () => {
   }, [theme])
   return (
     <div className="App">
-      <MenuContextProvider>
-        <Topbar />
-        <div className="container">
-          <Sidebar />
-          <main>
-            <Outlet />
-          </main>
-        </div>
-      </MenuContextProvider>
+      <Outlet />
     </div>
   )
 }

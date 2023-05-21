@@ -135,4 +135,64 @@ button.clean {
 
 .container main {
   width: 100%;
+  padding: 16px;
+  overflow: auto;
+  scrollbar-color: var(--sidebar-scroll-color-moz);
+  scrollbar-width: thin;
+}
+
+.container main::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--sidebar-scroll-color);
+}
+.container main::-webkit-scrollbar-thumb {
+  background: var(--sidebar-scroll-color-thumb);
+  -webkit-border-radius: 5px;
+}
+
+.widget {
+  padding: 20px;
+  background-color: var(--widget-bg);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+}
+
+.form-element:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.form-element label {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-input {
+  background-color: transparent;
+  color: var(--input-color);
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form-input::placeholder {
+  color: var(--input-color);
+  opacity: 0.6;
+}
+
+.form-input.invalid {
+  border-color: rgb(245, 6, 6);
+}
+
+@media screen and (min-width: 600px){
+  .form-element {
+    flex-direction: row;
+  }
+}
+
+.form-error {
+  margin-top: 5px;
+  color: rgb(245, 6, 6);
+  font-size: .8125rem;
 }

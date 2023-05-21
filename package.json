@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^3.0.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.0",
+    "axios": "^1.4.0",
     "D": "^1.0.0",
     "date-fns": "^2.29.3",
     "react": "^18.2.0",
@@ -24,6 +25,7 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.10.0",
     "recharts": "^2.5.0",
+    "swr": "^2.1.5",
     "url": "^0.11.0",
     "zod": "^3.21.4"
   },

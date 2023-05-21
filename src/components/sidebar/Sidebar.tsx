@@ -1,4 +1,4 @@
-import { AttachMoney, LineStyle, PermIdentity, Report, Storefront, Timeline, TrendingUp, WorkOutline } from '@mui/icons-material';
+import { AttachMoney, LineStyle, PermIdentity, Storefront } from '@mui/icons-material';
 import { useContext } from 'react';
 import { MenuContext } from '@/contexts/MenuContext';
 import sidebarStyleModule from './sidebar.module.scss';
@@ -12,16 +12,6 @@ children: [
         text: 'Home',
         link: '/'
     },
-    {
-        icon: <Timeline />,
-        text: 'Analytics',
-        link: '/'
-    },
-    {
-        icon: <TrendingUp />,
-        text: 'Sales',
-        link: '/'
-    }
 ]},
 {
     title: 'Quick Menu',
@@ -39,29 +29,9 @@ children: [
         {
             icon: <AttachMoney />,
             link: '',
-            text: 'Transactions'
+            text: 'Orders'
         }
     ]
-},
-{
-    title: 'Staff',
-    children: [
-        {
-            icon: <WorkOutline />,
-            link: '',
-            text: 'Manage'
-        },
-        {
-            icon: <Timeline />,
-            link: '',
-            text: 'Analytics',
-        },
-        {
-            icon: <Report />,
-            link: '',
-            text: 'Reports'
-        }
-    ],
 }]
 
 const Sidebar = () => {

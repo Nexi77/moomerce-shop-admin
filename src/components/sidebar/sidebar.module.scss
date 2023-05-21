@@ -6,6 +6,7 @@
     overflow: auto;
     color: var(--sidebar-color);
     position: absolute;
+    min-width: 250px;
     transform: translateX(-100vw);
     background-color: var(--sidebar-bg);
     transition: transform 0.3s;

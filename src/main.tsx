@@ -9,15 +9,18 @@ import App from '@/App'
 import router from '@/config/router'
 import './variables.css'
 import './index.css'
+import AuthContextProvider from './contexts/AuthContext';
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeContextProvider>
-      {/* @ts-ignore */}  
-      <RouterProvider router={router}>
-          <App />
-      </RouterProvider>
+      <AuthContextProvider>
+        {/* @ts-ignore */}  
+        <RouterProvider router={router}>
+            <App />
+        </RouterProvider>
+      </AuthContextProvider>
     </ThemeContextProvider>
   </React.StrictMode>,
 )
