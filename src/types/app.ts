@@ -11,3 +11,11 @@ export interface UserModel {
     updatedAt: string;
     __v: number;
 }
+
+export interface ListUserModel {
+    _id: string;
+    email: string;
+    name: string;
+    createdAt: string;
+    isAdmin: boolean;
+}

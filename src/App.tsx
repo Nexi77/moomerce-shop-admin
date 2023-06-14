@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from '@/contexts/ThemeContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
@@ -22,6 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <Outlet />
+      <ToastContainer />
     </div>
   )
 }

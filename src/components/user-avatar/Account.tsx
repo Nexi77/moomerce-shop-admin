@@ -7,17 +7,34 @@ import { ThemeContext } from '@/contexts/ThemeContext';
 import useSwr from 'swr';
 import fetcher from '@/utils/fetcher';
 import { UserModel } from '@/types/app';
+import axiosInstance from '@/config/axios';
+import { toast } from 'react-toastify';
+import { AuthContext } from '@/contexts/AuthContext';
+import { cache } from 'swr/_internal';
 import topbarStyleModule from '../topbar/topbar.module.scss';
 import avatarStyleModule from './avatar.module.scss';
 
 const Avatar = () => {
     const { theme, setTheme } = useContext(ThemeContext)
+    const { setIsAuthenticated } = useContext(AuthContext);
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
     const handleClose = () => setAnchorEl(null);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
     const open = Boolean(anchorEl);
     const id = open ? 'account-popover' : undefined;
     const { data } = useSwr<UserModel | null>('users/current', fetcher)
+    const handleLogout = async () => {
+        try {
+            await axiosInstance.delete('sessions')
+            cache.delete('users/current');
+            setIsAuthenticated(false);
+        }
+        catch (e) {
+            cache.delete('users/current');
+            setIsAuthenticated(false);
+            toast.error('Error while logging out')
+        }
+    }
     return (
         <>
             <button 
@@ -70,7 +87,7 @@ const Avatar = () => {
                                 {theme === 'dark' ? <LightMode fontSize='inherit' /> : <DarkMode fontSize='inherit' /> }
                                 Theme
                         </button>
-                        <button type='button' className={`${topbarStyleModule.menuEntry} popover-button`}>
+                        <button type='button' className={`${topbarStyleModule.menuEntry} popover-button`} onClick={handleLogout}>
                             <Logout fontSize='inherit' />
                             Logout
                         </button>

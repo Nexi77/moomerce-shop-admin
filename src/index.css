@@ -196,3 +196,44 @@ button.clean {
   color: rgb(245, 6, 6);
   font-size: .8125rem;
 }
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.MuiCard-root {
+  background-color: var(--card-bg) !important;
+  padding: .9375rem;
+  color: var(--primary-text-color) !important;
+}
+
+.MuiDataGrid-root, .MuiTablePagination-root {
+  color: var(--primary-text-color) !important;
+}
+
+.MuiDataGrid-root .MuiSvgIcon-root, .MuiTablePagination-root .MuiSvgIcon-root {
+    fill: var(--primary-text-color);
+}
+
+.btn.variant {
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.variant:hover {
+  filter: brightness(1.1);
+}
+
+.btn.warning {
+  background-color: #ee8c0d;
+}
+.btn.error {
+  background-color: #e71607;
+}

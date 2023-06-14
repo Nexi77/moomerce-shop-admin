@@ -16,6 +16,7 @@
     --sidebar-scroll-color-thumb: rgb(25, 25, 30);
     --widget-bg: rgb(255,255,255);
     --input-color: #222;
+    --card-bg: #fff;
 }
 
 .theme-dark {
@@ -33,4 +34,7 @@
     --sidebar-scroll-color-thumb: rgb(251, 251, 255);
     --widget-bg: rgb(46, 45, 45);
     --input-color: #fff;
+    --card-bg: #333;
+    --datagrid-header-background-color: blue;
+    --datagrid-header-text-color: white;
 }

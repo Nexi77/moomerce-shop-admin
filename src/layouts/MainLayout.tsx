@@ -2,8 +2,9 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Topbar from "@/components/topbar/Topbar";
 import { AuthContext } from "@/contexts/AuthContext";
 import MenuContextProvider from "@/contexts/MenuContext";
+import Login from '@/pages/auth/login/Login'
 import { useContext } from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 
 const MainLayout = () => {
@@ -21,9 +22,7 @@ const MainLayout = () => {
                     </div>
                 </MenuContextProvider> 
             }
-            {
-                !isAuthenticated && <Navigate to='/auth/login' />
-            }
+            { !isAuthenticated && <Login />}
       </div>
     )
 }

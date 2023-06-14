@@ -18,7 +18,7 @@ children: [
     children: [
         {
             icon: <PermIdentity />,
-            link: '',
+            link: 'users',
             text: 'Users'
         },
         {

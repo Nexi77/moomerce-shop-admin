@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "@/config/axios";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -26,25 +26,17 @@ type CreateSessionInput = TypeOf<typeof createSessionSchema>;
 
 const LoginPage = () => {
     const navigate = useNavigate()
-    const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
-    const { data, isLoading } = useSwr<UserModel | null>('users/current', fetcher)
-    const timeoutLoader = useRef(true);
+    const { setIsAuthenticated } = useContext(AuthContext);
+    const { data, error } = useSwr<UserModel | null>('users/current', fetcher, {
+        errorRetryCount: 3
+    })
     useEffect(() => {
-        if(data){
-            setIsAuthenticated(true);
-        }
-    }, [data, setIsAuthenticated])
-    useEffect(() => {
-        let timer: NodeJS.Timeout | undefined;
-        if(isAuthenticated)
+        if(data && !error)
         {
-            timer = setTimeout(() => {
-                timeoutLoader.current = false;
-                navigate('/');
-            }, 1000)
+            setIsAuthenticated(true);
+            navigate('/')
         }
-            return () => clearTimeout(timer)
-    }, [isAuthenticated, navigate])
+    }, [data, setIsAuthenticated, navigate, error])
     const [loginError, setLoginError] = useState<string | null>(null);
     const {
         register,
@@ -69,11 +61,6 @@ const LoginPage = () => {
         }
     }
 
-    if(isLoading || timeoutLoader.current) return (
-        <div className={loginStyleModule.loginPage}>
-            <Alert severity="info">Checking if user is logged in already...</Alert>
-        </div>
-    )
     return (
         <div className={loginStyleModule.loginPage}>
             <img src={bg_image} alt="dark screen with pencil" className={loginStyleModule.bgImage} />
