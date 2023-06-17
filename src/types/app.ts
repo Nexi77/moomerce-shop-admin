@@ -19,3 +19,10 @@ export interface ListUserModel {
     createdAt: string;
     isAdmin: boolean;
 }
+
+export interface ZodResponseError {
+    code: string;
+    keys: string[];
+    message: string;
+    path: string[];
+}

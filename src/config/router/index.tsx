@@ -4,6 +4,8 @@ import App from "@/App";
 import Home from "@/pages/home/Home";
 import MainLayout from "@/layouts/MainLayout";
 import UsersList from "@/pages/users/UsersList";
+import UserEditForm from "@/pages/users/UserEditForm";
+import CreateUserForm from "@/pages/users/CreateUserForm";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +22,15 @@ const router = createBrowserRouter([
             },
             {
               path: 'users',
-              element: <UsersList />
+              element: <UsersList />,
+            },
+            { 
+              path: 'users/:id',
+              element: <UserEditForm /> 
+            },
+            { 
+              path: 'users/create',
+              element: <CreateUserForm /> 
             }
           ]
         },

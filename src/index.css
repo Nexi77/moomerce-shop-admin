@@ -215,6 +215,14 @@ h1 {
     fill: var(--primary-text-color);
 }
 
+.MuiInputLabel-root {
+  color: var(--input-color) !important;
+}
+
+.MuiInputBase-root input {
+  color: var(--input-color) !important;
+}
+
 .btn.variant {
   padding: 8px 12px;
   border-radius: 5px;
@@ -231,9 +239,47 @@ h1 {
   filter: brightness(1.1);
 }
 
+.btn[disabled]{
+  background-color: #ccc !important;
+  color: #6c757d !important;
+  cursor: not-allowed;
+}
+
+.btn[disabled]:hover{
+  filter: brightness(1) !important;
+}
+
+.form-button {
+  padding: 15px !important;
+  width: auto;
+}
+
 .btn.warning {
   background-color: #ee8c0d;
 }
 .btn.error {
   background-color: #e71607;
+}
+.btn.primary {
+  background-color: #673ab7;
+}
+
+.header-with-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+@media screen and (min-width: 450px){
+  .header-with-button {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .header-with-button h1,h2,h3 {
+    margin-bottom: 0;
+  }
 }

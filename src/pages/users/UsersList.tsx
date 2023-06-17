@@ -53,7 +53,10 @@ const UsersList = () => {
   const handleRowIdGetter = (item: ListUserModel) => item._id;
   return (
     <div>
-      <h1 className={usersListStyles.usersListHeader}>List of Users</h1>
+      <div className="header-with-button">
+        <h1 className={usersListStyles.usersListHeader}>List of Users</h1>
+        <Link to="create" className='btn clean variant primary' type='button'>Add User</Link>
+      </div>
       { data && 
         <Card variant="outlined">
             <DataGrid 
@@ -61,7 +64,7 @@ const UsersList = () => {
               initialState={{
                 pagination: {
                   paginationModel: {
-                    pageSize: 2
+                    pageSize: 5
                   }
                 }
               }} 

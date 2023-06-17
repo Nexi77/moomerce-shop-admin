@@ -9,6 +9,7 @@ import App from '@/App'
 import router from '@/config/router'
 import './variables.css'
 import './index.css'
+import './styles.scss'
 import AuthContextProvider from './contexts/AuthContext';
 
 
