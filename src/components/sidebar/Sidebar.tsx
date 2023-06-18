@@ -23,7 +23,7 @@ children: [
         },
         {
             icon: <Storefront />,
-            link: '',
+            link: 'products',
             text: 'Products'
         },
         {
@@ -37,11 +37,11 @@ children: [
 const Sidebar = () => {
     const { menuOpen } = useContext(MenuContext);
     return (
-        <div className={`${sidebarStyleModule.sidebar} ${menuOpen ? sidebarStyleModule.sidebarOpened : ''}`}>
+        <nav className={`${sidebarStyleModule.sidebar} ${menuOpen ? sidebarStyleModule.sidebarOpened : ''}`}>
             <div className="sidebarWrapper">
                 <SingleMenu menu={menu}/>
             </div>
-        </div>
+        </nav>
     )
 }
 

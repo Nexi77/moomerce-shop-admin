@@ -13,7 +13,7 @@ const Topbar = () => {
     const handleMenuClick = () => setMenuState(prev => !prev)
 
     return (
-        <div className={topbarStyleModule.topbar}>
+        <header className={topbarStyleModule.topbar}>
             <div className={topbarStyleModule.topbarWrapper}>
                 <div className="topLeft">
                     <Link to="/">
@@ -43,7 +43,7 @@ const Topbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

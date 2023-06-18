@@ -8,7 +8,7 @@ import { useState } from "react";
 import { ListUserModel, ZodResponseError } from "@/types/app";
 import { AxiosError } from "axios";
 import { toast } from "react-toastify";
-import userFormStyles from './userForm.module.scss'
+import formStyles from '@/assets/styles/form.module.scss'
 
 const FormSchema = z.object({
     name: z.string().min(4, { message: 'Name must be at least 4 chars long'}),
@@ -56,9 +56,9 @@ const CreateUserForm = () => {
     return (
         <section>
             <Card>
-                <h2 className={userFormStyles.formTitle}>Create user</h2>
+                <h2 className={formStyles.formTitle}>Create user</h2>
                 { error !== null && <Alert severity="error" style={{ marginBottom: '20px'}}>{error}</Alert> }
-                <form onSubmit={handleSubmit(onSubmit)} className={userFormStyles.form}>
+                <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
                 <div className="form-group form-group-input">
                         <label htmlFor="name">Name
                             <input  
