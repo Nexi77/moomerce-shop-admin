@@ -9,3 +9,43 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.previewWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.previewWrapper > div {
+    display: flex;
+    align-items: center;
+}
+
+.previewLabel {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.columnData {
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.productsList > div {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.productsList span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

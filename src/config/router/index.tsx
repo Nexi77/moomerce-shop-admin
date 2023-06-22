@@ -9,6 +9,8 @@ import CreateUserForm from "@/pages/users/CreateUserForm";
 import ProductsList from "@/pages/products/ProductsList";
 import CreateProductForm from "@/pages/products/CreateProductForm";
 import EditProductForm from "@/pages/products/EditProductForm";
+import OrdersList from "@/pages/orders/OrdersList";
+import OrderDetails from "@/pages/orders/OrderDetails";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
               path: 'products/:id',
               element: <EditProductForm /> 
             },
+            {
+              path: 'orders',
+              element: <OrdersList />
+            },
+            {
+              path: 'orders/:id',
+              element: <OrderDetails />
+            }
           ]
         },
       ]

@@ -1,8 +1,7 @@
 import Popover from '@mui/material/Popover';
 import { useState, useContext } from 'react';
-import { Person, Settings, Logout, LightMode, DarkMode } from '@mui/icons-material';
+import { Person, Logout, LightMode, DarkMode } from '@mui/icons-material';
 import Divider from '@mui/material/Divider';
-import { Link } from 'react-router-dom';
 import { ThemeContext } from '@/contexts/ThemeContext';
 import useSwr from 'swr';
 import fetcher from '@/utils/fetcher';
@@ -72,13 +71,13 @@ const Avatar = () => {
                     </div>
                     <Divider />
                     <div className={avatarStyleModule.buttonsList}>
-                        <Link
+                        {/* <Link
                             to="/" 
                             className={`${topbarStyleModule.menuEntry} popover-button`}
                         >
                             <Settings fontSize='inherit' />
                             Settings
-                        </Link>
+                        </Link> */}
                         <button 
                                 type="button" 
                                 className={`${topbarStyleModule.menuEntry} popover-button ${avatarStyleModule.themeSwitcher}`}

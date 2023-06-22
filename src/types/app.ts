@@ -63,3 +63,27 @@ export interface OptionModel {
     label: string;
     value: string | number;
 }
+
+export interface OrderProductModel {
+    productId: string;
+    quantity: number;
+}
+
+interface AddressModel {
+    street: string;
+    houseNumber: number;
+    appartmentNumber?: number;
+    postalCode: string;
+    city: string;
+    country: string;
+  }
+
+  
+export interface OrderListModel {
+    _id: string;
+    userId: string;
+    products: OrderProductModel[];
+    amount: number;
+    address: AddressModel;
+    status: string;
+}

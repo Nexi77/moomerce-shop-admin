@@ -12,3 +12,21 @@
     max-width: 200px;
     max-height: 50px;
 }
+
+.arrayWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.arrayRender {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.addressCell {
+    display: flex;
+    flex-direction: column;
+}

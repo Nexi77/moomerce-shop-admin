@@ -28,7 +28,7 @@ children: [
         },
         {
             icon: <AttachMoney />,
-            link: '',
+            link: 'orders',
             text: 'Orders'
         }
     ]
